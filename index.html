@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Product Landing Page </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Sarpanch" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Gurajada" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet" type="text/css">
+<style>
+
+* {
+	box-sizing: border-box;
+}
+
+
+#header {
+	padding: 10px 100px 390px 100px; 
+	margin: 5px;
+	text-align: center;
+	background-image: url(images/background.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#header-img {
+	border: double;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 20px;
+}
+
+@media (max-width: 650px) {
+  #nav-bar {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    position: relative;
+  }
+}
+
+ul {
+  	width: 100%;
+	  margin-bottom: 50px;
+  	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  	color: white;
+  	text-align: center;
+  	padding: 0px;
+  	text-decoration: none;
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: #802000;
+    border: double;
+    border-width: 5px;
+}
+
+li {
+  float: right;
+}
+ 
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+.nav-link {
+	padding: 20px;
+}
+
+#submit {
+	border:solid;
+	border-width: 3px;
+	background-color: green;
+	padding: 10px;
+}
+
+#email {
+	margin-top: 0;
+	font-family: monospace;
+	text-align: right
+}
+
+#h4 {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Sarpanch;
+  font-size: 30px;
+}
+
+#video {
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	margin-top: 50px;
+  display: flex;
+ 	width: 100%;
+}
+
+#about {
+	text-align: center;
+	font-family: Dhurjati;
+	font-size: 25px;
+}
+
+
+h1 {
+	font-family: Sarpanch;
+	font-size: 90px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 1px;
+}
+
+h3 {
+	font-family: Gurajada;
+	font-size: 30px;
+}
+
+p {
+	font-family: Dhurjati;
+	font-size: 20px;
+	text-align: left;
+}
+
+h2 {
+	font-family: Dhurjati;
+	font-size: 25px;	
+}
+
+body {
+	background-color: #ffd8cc;
+	background-attachment: fixed;
+}
+
+#form {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+}
+
+
+#product {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.product > .level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+}
+
+@media (max-width: 800px) {
+  #form {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div id="form">
+	<div id="header">
+		<div id="nav-bar">
+		<ul>
+			<li><a class="nav-link" href="#about">ABOUT</a></li>
+			<li><a class="nav-link" href="#features"> FEATURES </a></li>
+			<li><a class="nav-link" href="#form"> PRODUCTS </a></li>
+		</ul>
+	</div>
+	<br> <br> <br>
+		<img id="header-img" src="images/logo.jpg" width="250px" height="250px" position="center"><hr></hr><hr></hr>
+		<h1> Meatropolitan </h1>
+		<h3> Food Service Distributor </h3>
+	</div>
+	<div id="form">
+		<h4 id="h4"> ABOUT </h4>
+		<p id="about">
+			Meatropolitan is a home meal delivery service that brings professional chefs to your home to prepare delicious, customized meals and features nutrient rich ingredients, created by top of line chefs. You can place your order and receive it within 48 hours. It's a fresh, clean site that feels honest and dependable by incorporating bright backgrounds and friendly imagery. Order now!
+		</p>
+		<div id="form">
+			<iframe id="video" width="1500" height="600" src="https://www.youtube.com/embed/aa6GcVY7Ijg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+		<div id="form">
+			<h4 id="h4"> FEATURES </h4>
+   			 <section id="features">
+    		  <div class="grid">
+      		  <div class="desc">
+          <h2>Premium Meat</h2>
+          <p>
+            Our food service made use of the quality meat products that will surely melt in your mouth.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="desc">
+          <h2>Fast Shipping</h2>
+          <p>
+            We make sure you recieve your orders as soon as we have finished
+            making it. We also give refunds if satisfaction was not reached.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="desc">
+          <h2>Quality Assurance</h2>
+          <p>
+            For every purchase you make, we will ensure there are no damages or
+            faults and we will always check the product quality.
+          </p>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <h4 id="h4"> PRODUCTS </h4>
+     <section id="product">
+      <div class="product" id="chopped-chicken">
+        <div class="level"> Seasoned Grilled Chicken Chopped</div>
+        <h2>P499</h2>
+        <button id="submit">Order</button>
+      </div>
+      <div class="product" id="shanghai">
+        <div class="level">Lumpiang Shanghai Overload</div>
+        <h2>P50</h2>
+        <button id="submit">Order</button>
+      </div>
+      <div class="product" id="nuggets">
+        <div class="level">Chicken Nuggets</div>
+        <h2>P50</h2>
+        <button id="submit">Order</button>
+      </div>
+      <div class="product" id="bacon-chicken">
+      <div class="level">Bacon Coated Grilled Chicken</div>
+        <h2>P499</h2>	
+        <button id="submit">Order</button>
+      </div>
+  </div>
+    </section>
+    <br>
+	<br>
+    <div id="email">
+    	<p id="email"> For inquiries and feedbacks</p>
+      <form id="email-label" for="email" action=" https://www.freecodecamp.com/email-submit">Email</label>
+      <input
+        type="email"
+        name="email"	
+        id="email"
+        class="form-control"
+        placeholder="Enter your Email"
+        required
+      />
+    </div>
+	
+
+
+	
+
+</body>
+</html>
