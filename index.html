@@ -1,33 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Product Landing Page </title>
+  <title> Product Landing Page </title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css?family=Sarpanch" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Qwigley" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Unkempt" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Timmana" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Gurajada" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Milonga" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.contact {
+  background: #007bb5;
+  color: white;
+}
+
+.address {
+  background: #bb0000;
+  color: white;
 }
 
 
 #header {
-	padding: 10px 100px 390px 100px; 
-	margin: 5px;
-	text-align: center;
-	background-image: url(images/background.jpg);
-	background-size: cover;
-	background-attachment: fixed;
+  padding: 10px 100px 390px 100px; 
+  text-align: center;
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #header-img {
-	border: double;
-	border-radius: 50%;
-	border-color: black;
-	border-width: 20px;
+  border: double;
+  border-radius: 50%;
+  border-color: black;
+  border-width: 20px;
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+#nav-bar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 @media (max-width: 650px) {
@@ -43,20 +139,20 @@
 }
 
 ul {
-  	width: 100%;
-	  margin-bottom: 50px;
-  	display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
-  	color: white;
-  	text-align: center;
-  	padding: 0px;
-  	text-decoration: none;
-  	list-style-type: none;
-  	margin: 0;
-  	padding: 0;
-  	overflow: hidden;
-  	background-color: #802000;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #802000;
     border: double;
     border-width: 5px;
 }
@@ -82,20 +178,22 @@ li a:hover:not(.active) {
 }
 
 .nav-link {
-	padding: 20px;
+  padding: 20px;
 }
 
 #submit {
-	border:solid;
-	border-width: 3px;
-	background-color: green;
-	padding: 10px;
+  border:solid;
+  border-width: 3px;
+  background-color: green;
+  padding: 10px;
 }
 
-#email {
-	margin-top: 0;
-	font-family: monospace;
-	text-align: right
+#email { 
+  margin-top: 50px;
+  font-family: Dhurjati; 
+  text-align: center;
+  font-size: 20px;
+  color: #000000;
 }
 
 #h4 {
@@ -103,149 +201,233 @@ li a:hover:not(.active) {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: Sarpanch;
-  font-size: 30px;
+  font-family: Qwigley;
+  font-size: 60px;
 }
 
 #video {
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 50px;
   display: flex;
- 	width: 100%;
+  width: 100%;
 }
 
 #about {
-	text-align: center;
-	font-family: Dhurjati;
-	font-size: 25px;
+  text-align: center;
+  font-family: Dhurjati;
+  font-size: 25px;
+}
+.button {
+  border-radius: 4px;
+  background-color: #336600;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 
 h1 {
-	font-family: Sarpanch;
-	font-size: 90px;
-	font-weight: bold;
-	text-transform: uppercase;
-	margin-bottom: 1px;
+  font-family: Milonga;
+  font-size: 90px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1px;
 }
 
 h3 {
-	font-family: Gurajada;
-	font-size: 30px;
+  font-family: Unkempt;
+  font-size: 40px;
+}
+
+#caption {
+  font-family: Unkempt;
+  font-size: 30px;
+  text-align: center;
 }
 
 p {
-	font-family: Dhurjati;
-	font-size: 20px;
-	text-align: left;
+  font-family: Dhurjati;
+  font-size: 20px;
+  text-align: left;
 }
 
 h2 {
-	font-family: Dhurjati;
-	font-size: 25px;	
+  font-family: Dhurjati;
+  font-size: 25px;  
 }
 
 body {
-	background-color: #ffd8cc;
-	background-attachment: fixed;
+  background-image: url(images/body.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 #form {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+  background-color: white;
+  padding: 30px;
 }
 
 .grid {
   display: flex;
 }
 
-
-#product {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: #ffffff;
-}
-
-.product {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: calc(100% / 3);
-  margin: 10px;
-  border: 1px solid #000;
-  border-radius: 3px;
-}
-
-.product > .level {
-  background-color: #ddd;
-  color: black;
-  padding: 15px 0;
-  width: 100%;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.product > h2 {
-  margin-top: 15px;
-}
-
-.product > ol {
-  margin: 15px 0;
-}
-
-.product > ol > li {
-  padding: 5px 0;
-}
-
 @media (max-width: 800px) {
   #form {
     flex-direction: column;
+    }
+    h1{
+      font-size: 40px;
+    }
   }
-  .product {
-    max-width: 300px;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 10px;
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0 4px;
+  position: relative;
+}
+
+
+.column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  position: relative;
+}
+
+.column img {
+  margin-top: 8px;
+  border:double;
+  border-width: 5px;
+  border-color: brown;
+  width: 700px;
+  height: 600px;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 100%;
   }
 }
+
+.container {
+  position: relative;
+  width: 80%;
+  border: solid #333333;
+}
+
+.container img {
+  width: 100%;
+  height: 600px;
+}
+
+.input-text {
+  min-height: 120px;
+  width: 100%;
+  padding:10px;
+  resize: vertical;
+}
+
+#footer {
+  font-family: monospace;
+  font-size: 30px;
+  text-align: left;
+}
+
 
 </style>
 </head>
 <body>
-  <div id="form">
-	<div id="header">
-		<div id="nav-bar">
-		<ul>
-			<li><a class="nav-link" href="#about">ABOUT</a></li>
-			<li><a class="nav-link" href="#features"> FEATURES </a></li>
-			<li><a class="nav-link" href="#form"> PRODUCTS </a></li>
-		</ul>
-	</div>
-	<br> <br> <br>
-		<img id="header-img" src="images/logo.jpg" width="250px" height="250px" position="center"><hr></hr><hr></hr>
-		<h1> Meatropolitan </h1>
-		<h3> Food Service Distributor </h3>
-	</div>
-	<div id="form">
-		<h4 id="h4"> ABOUT </h4>
-		<p id="about">
-			Meatropolitan is a home meal delivery service that brings professional chefs to your home to prepare delicious, customized meals and features nutrient rich ingredients, created by top of line chefs. You can place your order and receive it within 48 hours. It's a fresh, clean site that feels honest and dependable by incorporating bright backgrounds and friendly imagery. Order now!
-		</p>
-		<div id="form">
-			<iframe id="video" width="1500" height="600" src="https://www.youtube.com/embed/aa6GcVY7Ijg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
 
-		<div id="form">
-			<h4 id="h4"> FEATURES </h4>
-   			 <section id="features">
-    		  <div class="grid">
-      		  <div class="desc">
+  <div class="icon-bar">
+  <a href="https://www.facebook.com/Meatropolitan-103961068170016" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" class="google"><i class="fa fa-google"></i></a>  
+  <a href="#email" class="contact"><i class="fa fa-phone"></i></a>
+  <a href="#map" class="address"><i class="fa fa-map-marker"></i></a> 
+</div>
+
+  <div id="header">
+  <div id="nav-bar">
+    <ul>
+ <li> <a class="nav-link" href="#about">About</a></li>
+  <li><a class="nav-link" href="#features">Features</a></li>
+ <li> <div class="dropdown">
+    <button class="dropbtn">Product 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="nav-link" href="#rice-meal">Rice Meals</a>
+      <a class="nav-link" href="#dessert">Dessert</a>
+      <a class="nav-link" href="#beverage">Beverages</a>
+    </div>
+  </div> 
+</li>
+</div>
+</ul>
+
+  <br> <br> <br>
+    <img id="header-img" src="images/logo.jpg" width="250px" height="250px" position="center"><hr></hr><hr></hr>
+    <h1> Meatropolitan </h1>
+    <h3> Food Service Distributor </h3>
+  </div>
+  <hr>
+    </hr>
+  <div id="form">
+    <h4 id="h4"> ABOUT </h4>
+    <p id="about">
+      Meatropolitan is a home meal delivery service that brings professional chefs to your home to prepare delicious, customized meals and features nutrient rich ingredients, created by top of line chefs. You can place your order and receive it within 48 hours. It's a fresh, clean site that feels honest and dependable by incorporating bright backgrounds and friendly imagery. Order now!
+    </p>
+    <div id="form">
+      <iframe id="video" width="1500" height="600" src="https://www.youtube.com/embed/aa6GcVY7Ijg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div id="form">
+      <h4 id="h4"> FEATURES </h4>
+         <section id="features">
+          <div class="grid">
+            <div class="desc">
           <h2>Premium Meat</h2>
           <p>
             Our food service made use of the quality meat products that will surely melt in your mouth.
@@ -274,47 +456,103 @@ body {
     <br>
     <br>
     <h4 id="h4"> PRODUCTS </h4>
-     <section id="product">
-      <div class="product" id="chopped-chicken">
-        <div class="level"> Seasoned Grilled Chicken Chopped</div>
-        <h2>P499</h2>
-        <button id="submit">Order</button>
-      </div>
-      <div class="product" id="shanghai">
-        <div class="level">Lumpiang Shanghai Overload</div>
-        <h2>P50</h2>
-        <button id="submit">Order</button>
-      </div>
-      <div class="product" id="nuggets">
-        <div class="level">Chicken Nuggets</div>
-        <h2>P50</h2>
-        <button id="submit">Order</button>
-      </div>
-      <div class="product" id="bacon-chicken">
-      <div class="level">Bacon Coated Grilled Chicken</div>
-        <h2>P499</h2>	
-        <button id="submit">Order</button>
-      </div>
-  </div>
-    </section>
-    <br>
-	<br>
+    <h3 id="rice-meal">Rice Meals</h3>
+   <div class="container">
+      <p id="caption">Grilled Chicken Slices @ 350/kilogram</p>
+  <img src="images/1.jpg">
+  <button class="button" style="vertical-align:middle"><span> Order </span></button>
+</div>
+    <div class="container">
+      <p id="caption">Lumpiang Shanghai Overload @ 50/pck</p>
+  <img src="images/2.jpg">
+<button class="button" style="vertical-align:middle"><span>Order </span></button>
+</div>
+    <div class="container">
+      <p id="caption">Fist-size Chicken Nuggets @ 50/pck</p>
+  <img src="images/3.jpg">
+ <button class="button" style="vertical-align:middle"><span>Order </span></button>
+</div>
+    <div class="container">
+      <p id="caption">Whole Grilled Chicken @500/chicken</p>
+  <img src="images/4.jpg">
+<button class="button" style="vertical-align:middle"><span>Order </span></button>
+</div><br><br><br><br><br>
+
+
+   <h3 id="dessert">Desserts</h3>
+   <div class="container">
+    <p id="caption">Milk Chocolate Coated Polvoron @ 70/box</p>
+  <img src="images/5.jpg">
+  <button class="button" style="vertical-align:middle"><span> Order </span></button>
+</div>
+    <div class="container">
+      <p id="caption">Special Coated Polvoron @90/box</p>
+  <img src="images/6.jpg">
+<button class="button" style="vertical-align:middle"><span>Order </span></button>
+</div>
+    <div class="container">
+      <p id="caption">Flavored Peanut @60/pck</p>
+  <img src="images/7.jpg">
+ <button class="button" style="vertical-align:middle"><span>Order </span></button>
+</div>
+    <div class="container">
+      <p id="caption">Banana Bread w/ Toppings @ 100/box</p>
+  <img src="images/8.jpg">
+<button class="button" style="vertical-align:middle"><span>Order </span></button>
+</div>
+ <div class="container">
+  <p id="caption">Dough Nuts @100/box</p>
+  <img src="images/9.jpg">
+<button class="button" style="vertical-align:middle"><span>Order </span></button>
+</div><br><br><br><br><br>
+<h3 id="beverage">Beverages</h3>
+<div class="container">
+  <p id="caption">Fruit Juices @30</p>
+  <img src="images/10.jpg">
+<button class="button" style="vertical-align:middle"><span>Order </span></button>
+</div>
+<div class="container">
+  <p id="caption">Milk Tea @55</p>
+  <img src="images/11.jpg">
+<button class="button" style="vertical-align:middle"><span>Order </span></button>
+</div>
+<div class="container">
+  <p id="caption">Vegetable Juices @ 30</p>
+  <img src="images/12.jpg">
+<button class="button" style="vertical-align:middle"><span>Order </span></button>
+</div>
+<div class="container">
+  <p id="caption">Soda @ 30</p>
+  <img src="images/13.jpg">
+<button class="button" style="vertical-align:middle"><span>Order </span></button>
+</div>
+</div>
+</div>
+</div>
+
+
+  <footer>
+  <div id="map" class="mapouter"><div class="gmap_canvas"><iframe width="1900" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=upper%20rock%20quarry%20baguio%20city%20philippines&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://yt2.org"></a><br><style>.mapouter{position:relative;text-align:center;height:600px;width:1900px;}</style><style>.gmap_canvas {overflow:hidden;background:none!important;height:600px;width:1900px;padding: 10px 50px;}</style></div></div>
+  <div id="form">
     <div id="email">
-    	<p id="email"> For inquiries and feedbacks</p>
+      <h4 id="h4">CONTACT INFORMATION</h4>
+      <p id="email">Any comments/suggestions? We greatly appreciate your feedbacks for us to think the  best possible solution to perform better and improve our products. We bring people together and create a healthy communication flow.</p>
+      <textarea
+      placeholder= "Enter comments/suggestions"
+      class="input-text"></textarea>
+      <p id="email">Please enter your email for us to send responses about your comments.<br>Or contact us: <br> 09090319997 / 09381443776</p>
       <form id="email-label" for="email" action=" https://www.freecodecamp.com/email-submit">Email</label>
       <input
         type="email"
-        name="email"	
+        name="email"  
         id="email"
         class="form-control"
         placeholder="Enter your Email"
         required
       />
     </div>
-	
-
-
-	
-
+</form>
+<p id="caption"> Thank you so much!</p>
+</footer>
 </body>
 </html>
